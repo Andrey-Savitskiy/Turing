@@ -6,6 +6,13 @@ class Human {
 }
 
 
+function average_age_counter(human_list) {
+    let average_age = human_list.reduce((average_age, human) => average_age + human.age, 0) / human_list.length
+
+    return average_age
+}
+
+
 let human_list = [
     new Human('Andrey', 20),
     new Human('Alex', 25),
@@ -13,6 +20,4 @@ let human_list = [
     new Human('Vlad', 12),
 ]
 
-let average_age = human_list.reduce((average_age, human) => average_age + human.age, 0) / human_list.length
-
-console.log(average_age);
+console.log(average_age_counter(human_list));
